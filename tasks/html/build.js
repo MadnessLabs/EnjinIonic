@@ -1,4 +1,4 @@
-const jade = require('gulp-jade');
+const pug = require('gulp-pug');
 const gulpif = require('gulp-if');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-intercept');
@@ -12,7 +12,7 @@ module.exports = function(gulp, callback) {
                 this.emit('end');
             }
         })))
-        .pipe(jade({
+        .pipe(pug({
             locals: configJSON,
             pretty: true
         }))        

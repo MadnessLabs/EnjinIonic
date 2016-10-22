@@ -1,9 +1,9 @@
-const jade = require('gulp-jade');
+const pug = require('gulp-pug');
 const rename = require('gulp-rename');
 
 module.exports = function(gulp, callback) {
     return gulp.src(htmlSrcDir+htmlSrcFile)
-        .pipe(jade({
+        .pipe(pug({
             locals: configJSON,
             pretty: true
         }))        

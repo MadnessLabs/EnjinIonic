@@ -1,4 +1,4 @@
-const jadelint = require('gulp-jadelint');
+const puglint = require('gulp-pug-lint');
 const runSequence = require('run-sequence');
 const plumber = require('gulp-plumber');
 const intercept = require('gulp-intercept');
@@ -15,11 +15,11 @@ module.exports = function(gulp, callback) {
                 this.emit('end');
             }
         }))
-        .pipe(jadelint())
+        .pipe(puglint())
         .pipe(intercept(function(file) {
-            if(file.jadelint.errors.length > 0){
-                errorCount = errorCount + file.jadelint.errors.length;
-                errorMessage.concat(file.jadelint.errors);
+            if(file.puglint.errors.length > 0){
+                errorCount = errorCount + file.puglint.errors.length;
+                errorMessage.concat(file.puglint.errors);
                 console.log(errorMessage);
             }
             return file;

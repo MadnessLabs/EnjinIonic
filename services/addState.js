@@ -8,9 +8,9 @@ const capFirstLetter = require('./capFirstLetter');
 
 
 module.exports = function(name, view) {
-    gulp.src(tmplDir+'jade/state.jade')
+    gulp.src(tmplDir+'pug/state.pug')
         .pipe(template({name: name}))
-        .pipe(rename(name+'.jade'))
+        .pipe(rename(name+'.pug'))
         .pipe(gulp.dest(htmlSrcDir+'state/'));
     gulp.src(tmplDir+'scss/state.scss')
         .pipe(template({name: name}))

@@ -4,9 +4,9 @@ const npc      = require('copy-paste');
 
 
 module.exports = function(name) {
-    gulp.src(tmplDir+'jade/popover.jade')
+    gulp.src(tmplDir+'pug/popover.pug')
         .pipe(template({name: name}))
-        .pipe(rename(name+'.jade'))
+        .pipe(rename(name+'.pug'))
         .pipe(gulp.dest(htmlSrcDir+'popover/'));
     gulp.src(tmplDir+'scss/popover.scss')
         .pipe(template({name: name}))

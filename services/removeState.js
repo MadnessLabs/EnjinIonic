@@ -23,7 +23,7 @@ module.exports = function(name) {
 
     gulp.src([
         cssSrcDir+'state/'+name+'.scss',
-        htmlSrcDir+'state/'+name+'.jade',
+        htmlSrcDir+'state/'+name+'.pug',
         htmlDir+'state/'+name+'.html',
         jsSrcDir+'state/'+name+'State.ts'
     ],{

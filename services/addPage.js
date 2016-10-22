@@ -7,11 +7,11 @@ const addRoute       = require('./addRoute');
 
 
 module.exports = function(name) {
-    gulp.src(tmplDir+'jade/page.jade')
+    gulp.src(tmplDir+'pug/page.pug')
         .pipe(template({
             name: name
         }))
-        .pipe(rename(name+'.jade'))
+        .pipe(rename(name+'.pug'))
         .pipe(gulp.dest(htmlSrcDir+'page/'));
     gulp.src(tmplDir+'scss/page.scss')
         .pipe(template({

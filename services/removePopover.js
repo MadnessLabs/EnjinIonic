@@ -4,7 +4,7 @@ const clean    = require('gulp-clean');
 module.exports = function(name) {
     gulp.src([
         cssSrcDir+'popover/'+name+'.scss',
-        htmlSrcDir+'popover/'+name+'.jade',
+        htmlSrcDir+'popover/'+name+'.pug',
         htmlDir+'popover/'+name+'.html'
     ],{
         read: false

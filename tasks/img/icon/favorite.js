@@ -2,7 +2,7 @@ const favicons = require('gulp-favicons');
 
 
 module.exports = function(gulp, callback) {
-    /*gulp.src(htmlSrcDir+'favicon.jade', {read: false})
+    /*gulp.src(htmlSrcDir+'favicon.pug', {read: false})
         .pipe(clean());*/
     gulp.src(appIcon).pipe(favicons({
         appName: appName,
@@ -12,7 +12,7 @@ module.exports = function(gulp, callback) {
         path: '/img/icon/',
         version: appVersion,
         logging: true,
-        html: htmlSrcDir+'favicon.jade'
+        html: htmlSrcDir+'favicon.pug'
     }))
     .pipe(gulp.dest(imgIconDir));
 };

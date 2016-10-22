@@ -4,9 +4,9 @@ const npc      = require('copy-paste');
 
 
 module.exports = function(name) {
-    gulp.src(tmplDir+'jade/modal.jade')
+    gulp.src(tmplDir+'pug/modal.pug')
         .pipe(template({name: name}))
-        .pipe(rename(name+'.jade'))
+        .pipe(rename(name+'.pug'))
         .pipe(gulp.dest(htmlSrcDir+'modal/'));
     gulp.src(tmplDir+'scss/modal.scss')
         .pipe(template({name: name}))
