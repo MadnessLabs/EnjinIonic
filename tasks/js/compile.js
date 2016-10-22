@@ -22,5 +22,7 @@ module.exports = function(gulp, callback) {
         }));
 
         tsResult.dts.pipe(gulp.dest('build/js'));
-        return tsResult.js.pipe(gulp.dest('build/js'));
+        tsResult.js.pipe(gulp.dest('build/js')).on('end', function() {
+            callback();
+        });
 };
