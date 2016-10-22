@@ -1,6 +1,8 @@
-const setVars = require('./setVars');
 argv          = require('yargs').argv;
 browserSync   = require('browser-sync').create();
+
+const setVars = require('services/setVars');
+
 
 module.exports = function(){
     global.env = environment = argv.e ? argv.e : false;

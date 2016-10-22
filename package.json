@@ -1,0 +1,23 @@
+{
+  "name": "enjinionic",
+  "version": "1.0.0",
+  "description": "The build system for MadnessIonic boilerplate",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadnessLabs/EnjinIonic.git"
+  },
+  "keywords": [
+    "Madness",
+    "Labs"
+  ],
+  "author": "Madness Labs <info@madnesslabs.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadnessLabs/EnjinIonic/issues"
+  },
+  "homepage": "https://github.com/MadnessLabs/EnjinIonic#readme"
+}
