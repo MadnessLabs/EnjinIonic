@@ -1,7 +1,7 @@
 const pug = require('gulp-pug');
 const gulpif = require('gulp-if');
 const plumber = require('gulp-plumber');
-const rename = require('gulp-intercept');
+const rename = require('gulp-rename');
 
 module.exports = function(gulp, callback) {
     var ext = htmlSrcFile.split('.').pop();
