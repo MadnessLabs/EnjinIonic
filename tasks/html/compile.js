@@ -2,6 +2,7 @@ const jade = require('gulp-jade');
 const gulpif = require('gulp-if');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-intercept');
+const cache  = require('gulp-cached');
 
 module.exports = function(gulp, callback) {
     var errored = false;
