@@ -4,25 +4,25 @@ const runSequence = require('run-sequence');
 
 module.exports = function(gulp, callback) {
     global.isWatching = true;
-    gulp.watch(configFile, function(callback) {
-        runSequence('config:build', callback);
+    watch(configFile, function() {
+        runSequence('config:build');
     });
-    gulp.watch(cssWatch, function(callback){
-        runSequence('css:build', callback);
+    watch(cssWatch, function(){
+        runSequence('css:build');
     });
-    gulp.watch(jsWatch, function(callback){ 
-        runSequence('js:lint', callback);
+    watch(jsWatch, function(){ 
+        runSequence('js:lint');
     });
-    gulp.watch(jsLib, function(callback){
-        runSequence('js:libraries', callback)
+    watch(jsLib, function(){
+        runSequence('js:libraries')
     });
-    gulp.watch(htmlWatch, function(callback) {
-        runSequence('html:compile', callback);
+    watch(htmlWatch, function() {
+        runSequence('html:compile');
     });
-    gulp.watch(htmlTemplate, function(callback) {
-        runSequence('html:template', callback);
+    watch(htmlTemplate, function() {
+        runSequence('html:template');
     });
-    gulp.watch(imgWatch, function(callback){
+    watch(imgWatch, function(){
         runSequence('img:icon');
     });
 };
