@@ -34,7 +34,7 @@ module.exports = function(gulp, callback) {
         .pipe(gulp.dest(htmlDir))
         .on('end', function(){
             if(!errored && global.isWatching && global.synced){
-                runSequence('sync-reload');
+                runSequence('sync:reload');
             }else if(errored && global.isWatching && global.synced){
                 cache.caches = {};
                 browserSync.notify("<div style='text-align:left;'>"+errorMessage.join("<hr />")+"</div>", errorTimeout);
