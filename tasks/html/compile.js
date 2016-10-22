@@ -12,6 +12,7 @@ module.exports = function(gulp, callback) {
         .pipe(plumber({
             errorHandler: function(error) {
                 errored = true;
+                console.log(error.message);
                 if(global.isWatching && global.synced){
                     errorMessage.push(error.message.replace(/(?:\r\n|\r|\n)/g, '<br />'));
                 }
