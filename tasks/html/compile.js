@@ -3,6 +3,7 @@ const gulpif = require('gulp-if');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 const cache  = require('gulp-cached');
+const runSequence = require('run-sequence');
 
 module.exports = function(gulp, callback) {
     var errored = false;
