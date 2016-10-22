@@ -1,4 +1,4 @@
-const favicons = require('gulp-favicons');
+const favicons = require('favicons');
 
 
 module.exports = function(gulp, callback) {
