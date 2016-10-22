@@ -2,9 +2,7 @@ const favicons = require('favicons');
 
 
 module.exports = function(gulp, callback) {
-    /*gulp.src(htmlSrcDir+'favicon.pug', {read: false})
-        .pipe(clean());*/
-    gulp.src(appIcon).pipe(favicons({
+    var configuration = {
         appName: appName,
         appDescription: appDesc,
         background: "#fff",
@@ -13,6 +11,9 @@ module.exports = function(gulp, callback) {
         version: appVersion,
         logging: true,
         html: htmlSrcDir+'favicon.pug'
-    }))
-    .pipe(gulp.dest(imgIconDir));
+    };
+
+    favicons(appIcon, configuration, function() { 
+        callback();
+    });  
 };
