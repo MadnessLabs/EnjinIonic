@@ -12,5 +12,5 @@ module.exports = function(gulp, callback) {
             }
         }))
         .pipe(sass())
-        .pipe(gulp.dest('app/extension/build'));
+        .pipe(gulp.dest('extension/build'));
 };

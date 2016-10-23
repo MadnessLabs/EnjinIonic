@@ -16,7 +16,7 @@ module.exports = function(gulp, callback) {
         .pipe(template({
             app: appName
         }))
-        .pipe(gulp.dest('./app/extension')).on('end', function() {
+        .pipe(gulp.dest('./extension')).on('end', function() {
             runSequence('extension', callback);
         });
 };

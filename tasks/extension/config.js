@@ -2,7 +2,7 @@ const jeditor = require('gulp-json-editor');
 
 
 module.exports = function(gulp, callback) {
-    return gulp.src('./app/extension/manifest.json')
+    return gulp.src('./extension/manifest.json')
         .pipe(jeditor(function(json) {
             json.name = configJSON.extension.name ? configJSON.extension.name : appName;
             json.description = appDesc;
@@ -12,5 +12,5 @@ module.exports = function(gulp, callback) {
             json.permissions = configJSON.extension.permissions;
             return json; 
         }))
-        .pipe(gulp.dest("./app/extension"));
+        .pipe(gulp.dest("./extension"));
 };

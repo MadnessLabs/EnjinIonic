@@ -18,12 +18,12 @@ module.exports = function(gulp, callback) {
                 this.emit('end');
             }
         }))
-        .pipe(cache('extension-html'))
+        .pipe(cache('extension:html'))
         .pipe(pug({
             locals: configJSON,
             pretty: true
         }))
-        .pipe(gulp.dest('app/extension/build'))
+        .pipe(gulp.dest('./extension'))
         .on('end', function(){
             if(!errored && global.isWatching && global.synced){
                 runSequence('sync:reload');
