@@ -3,6 +3,7 @@ const ts = require('gulp-typescript');
 const gulpif = require('gulp-if');
 const cache = require('gulp-cached');
 const addsrc = require('gulp-add-src');
+const plumber = require('gulp-plumber');
 
 
 module.exports = function(gulp, callback) {
@@ -40,8 +41,8 @@ module.exports = function(gulp, callback) {
             }
         }));
 
-        tsResult.dts.pipe(gulp.dest('app/extension/build'));
-        tsResult.js.pipe(gulp.dest('app/extension/build')).on('end', function(callback) {
+        tsResult.dts.pipe(gulp.dest('extension/build'));
+        tsResult.js.pipe(gulp.dest('extension/build')).on('end', function() {
             callback();
         });
 };

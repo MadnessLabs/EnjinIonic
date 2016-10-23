@@ -3,7 +3,7 @@ const sass = require('gulp-sass');
 
 
 module.exports = function(gulp, callback) {
-    return gulp.src(['app/extension/src/**/*.scss'])
+    return gulp.src(['app/extension/**/*.scss'])
         .pipe(plumber({
             errorHandler: function(error) {
                 console.log(error.message);
@@ -12,5 +12,5 @@ module.exports = function(gulp, callback) {
             }
         }))
         .pipe(sass())
-        .pipe(gulp.dest('extension/build'));
+        .pipe(gulp.dest('extension/css'));
 };

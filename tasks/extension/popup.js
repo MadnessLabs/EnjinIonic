@@ -6,5 +6,5 @@ module.exports = function(gulp, callback) {
     return gulp.src(configJSON.extension.build.popup)
         .pipe(strip())
         .pipe(concat('extension.js'))
-        .pipe(gulp.dest('./app/extension/build'));
+        .pipe(gulp.dest('./extension/js'));
 };

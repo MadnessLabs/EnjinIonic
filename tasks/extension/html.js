@@ -8,7 +8,7 @@ module.exports = function(gulp, callback) {
     var errored = false;
     var errorMessage = [];
     var ext = htmlSrcFile.split('.').pop();
-    return gulp.src(['app/extension/src/**/*.pug'])
+    return gulp.src('app/extension/**/*.pug')
         .pipe(plumber({
             errorHandler: function(error) {
                 errored = true;

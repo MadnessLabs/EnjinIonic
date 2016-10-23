@@ -6,5 +6,5 @@ module.exports = function(gulp, callback) {
     return gulp.src(configJSON.extension.build.background)
         .pipe(strip())
         .pipe(concat('background.js'))
-        .pipe(gulp.dest('./extension/build'));
+        .pipe(gulp.dest('./extension/js'));
 };
